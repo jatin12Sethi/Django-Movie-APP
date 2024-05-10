@@ -1,0 +1,29 @@
+
+  <title>Movies Hub</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="mb-4">Movies Hub</h1>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Daily Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for movie in movies %}
+        <tr>
+          <td>{{ movie.title }}</td>
+          <td>{{ movie.genere }}</td>
+          <td>{{ movie.number_in_stock }}</td>
+          <td>{{ movie.daily_rate }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
